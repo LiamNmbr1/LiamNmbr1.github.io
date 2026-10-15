@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="gallery.js" defer></script>
+    <script src="contact.js" defer></script>
+</head>
+
+<header id="whoIam">
+    <h1>Liam Sobering</h1>
+</header>
+
+<body>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a Biomedical Engineering student at the University of Waterloo who enjoys the puzzle of a hard problem. In my past time I enjoy playing the saxophone, mountain biking, and playing board games (my favourite is Risk Legacy so far). This website contains a showcase of the projects I have done outside of work and my experience with each project. I enjoyed working on these projects in my past time and am open to criticism (on the website or on the projects), if you have any comments for me please fill the contact boxes at the bottom of the page.</p>
+        </section>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>2FA Lock</h3>
+                    <div class="project-gallery">
+                        <div class="gallery-viewport image-viewport">
+                            <div class="gallery-track image-track">
+                                <figure class="gallery-slide image-slide">
+                                    <video src="Lock/Lock video.mp4" muted loop playsinline preload="metadata" aria-label="2FA Lock video"></video>
+                                </figure>
+                                <figure class="gallery-slide image-slide">
+                                    <img src="Lock/Lock front.png" alt="2FA Lock">
+                                </figure>
+                            </div>
+                            <button class="image-arrow previous" type="button" aria-label="Previous photo" hidden>&lsaquo;</button>
+                            <button class="image-arrow next" type="button" aria-label="Next photo" hidden>&rsaquo;</button>
+                        </div>
+                        <div class="gallery-viewport caption-viewport" aria-live="polite">
+                            <div class="gallery-track caption-track">
+                                <p class="gallery-slide">This is a 3D printed project that I designed and built from scratch, with the purpose of preventing traditional lock picking techniques from being effective (I implemented a mechanical 2-factor authentication system to make that possible).</p>
+                                <p class="gallery-slide">Front view of the 2FA Lock.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="project-github-link" href="https://github.com/Anslo392/extension" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Groche</h3>
+                    <div class="project-gallery">
+                        <div class="gallery-viewport image-viewport">
+                            <div class="gallery-track image-track">
+                                <figure class="gallery-slide image-slide">
+                                    <video src="Groche/GROCHE video edited1.mp4" muted loop playsinline preload="metadata" aria-label="Groche project video"></video>
+                                </figure>
+                                <figure class="gallery-slide image-slide">
+                                    <img src="Groche/Groche Web.png" alt="Groche">
+                                </figure>
+                                <figure class="gallery-slide image-viewport">
+                                    <img src="Groche/Groche barcode.png" alt="Groche">
+                                </figure>
+                            </div>
+                            <button class="image-arrow previous" type="button" aria-label="Previous photo" hidden>&lsaquo;</button>
+                            <button class="image-arrow next" type="button" aria-label="Next photo" hidden>&rsaquo;</button>
+                        </div>
+                        <div class="gallery-viewport caption-viewport" aria-live="polite">
+                            <div class="gallery-track caption-track">
+                                <p class="gallery-slide">Groche was a hackathon project that resulted in a website that could scan your grocery items by their barcode and recommends recipes that use the food you purchased while you shop.</p>
+                                <p class="gallery-slide">This is where you can add recipes you would like to shop for, the website will track what you purchased, check it off for you, and let you know what extra items you have purchased.</p>
+                                <p class="gallery-slide">This is the barcode scanning view, where you would livestream your camera to the website and it would scan the barcode of the item you are purchasing. This is how it is supposed to keep track of your purchased items.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="project-github-link" href="https://github.com/Alexecono/Groche" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>WEBE</h3>
+                    <div class="project-gallery">
+                        <div class="gallery-viewport image-viewport">
+                            <div class="gallery-track image-track">
+                                <figure class="gallery-slide image-slide">
+                                    <video src="WEBE/WEBE with editing1.mp4" muted loop playsinline preload="metadata" aria-label="WEBE project video"></video>
+                                </figure>
+                                <figure class="gallery-slide image-slide">
+                                    <img src="WEBE/WEBE shortcut.png" alt="WEBE">
+                                </figure>
+                                <figure class="gallery-slide image-slide">
+                                    <img src="WEBE/WEBE therapist.png" alt="WEBE">
+                                </figure>
+                            </div>
+                            <button class="image-arrow previous" type="button" aria-label="Previous photo" hidden>&lsaquo;</button>
+                            <button class="image-arrow next" type="button" aria-label="Next photo" hidden>&rsaquo;</button>
+                        </div>
+                        <div class="gallery-viewport caption-viewport" aria-live="polite">
+                            <div class="gallery-track caption-track">
+                                <p class="gallery-slide">WEBE was a hackathon project that resulted in a google extension made to prevent users from scrolling through short form content for long periods of time and before deadlines.</p>
+                                <p class="gallery-slide">By clicking the extension a menu will appear allowing you to add tasks with their duration, difficulty, and deadline. This information will be used to determine how many scrolls per session are allowed.</p>
+                                <p class="gallery-slide">When you scroll past too many videos, the extension shows a prompt with a AI messenger that tries to convince you to stop scrolling. After this limit is reached too many times the extension blocks the window you are scrolling on.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="project-github-link" href="https://github.com/Anslo392/extension" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Trillium Flower Toy</h3>
+                    <div class="project-gallery">
+                        <div class="gallery-viewport image-viewport">
+                            <div class="gallery-track image-track">
+                                <figure class="gallery-slide image-slide">
+                                    <video src="TrilliumFlower/TrilliumVideo.mp4" muted loop playsinline preload="metadata" aria-label="Trillium flower toy video"></video>
+                                </figure>
+                                <figure class="gallery-slide image-slide">
+                                    <img src="TrilliumFlower/Trillium overall.png" alt="Overall view of the Trillium flower toy">
+                                </figure>
+                                <figure class="gallery-slide image-slide">
+                                    <img src="TrilliumFlower/Trillium cut view.png" alt="Cutaway view of the Trillium flower toy">
+                                </figure>
+                                <figure class="gallery-slide image-slide">
+                                    <img src="TrilliumFlower/Trillium mechanism.png" alt="Corkscrew mechanism inside the Trillium flower toy">
+                                </figure>
+                            </div>
+                            <button class="image-arrow previous" type="button" aria-label="Previous photo" hidden>&lsaquo;</button>
+                            <button class="image-arrow next" type="button" aria-label="Next photo" hidden>&rsaquo;</button>
+                        </div>
+                        <div class="gallery-viewport caption-viewport" aria-live="polite">
+                            <div class="gallery-track caption-track">
+                                <p class="gallery-slide">This is a video of the Trillium Flower Toy being assembled, it has 17 components in total (10 unique components) and was made with a group of other students. </p>
+                                <p class="gallery-slide">The goal of this project was to make a 3D printable puzzle that had some mechanism in it. This toy has a twistable base that pushes the pedals out creating a "blooming" effect.</p>
+                                <p class="gallery-slide">This is a cutaway view showing the internal corkscrew mechanism. it uses a plunger inside two shells with their own guidrails. the inner shell has a srtaigth vertical guidrail and the outer shell has a helical guidrail. When a small pin is inserted itno these three components it creates a corkscrew mechanism that works similarily to a lipstick case.</p>
+                                <p class="gallery-slide">Heres a close-up of the corkscrew mechanism. The slope of the helical track can determine how fast the plunger moves up as the base is twisted. We chose a relatively small slope to prevent jamming but had to ensure it wasnt too small so there would be enough material between the track to keep the whole structure ridgid.</p>
+                            </div>
+                        </div>
+                        <a class="project-github-link" href="https://github.com/LiamNmbr1/Trillium-Flower-Toy" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <dialog class="video-dialog" aria-labelledby="video-dialog-title">
+        <h2 id="video-dialog-title" class="visually-hidden">Expanded project video</h2>
+        <button class="video-dialog-close" type="button" aria-label="Close expanded video">&times;</button>
+        <video muted playsinline controls></video>
+    </dialog>
+    <footer id="contact">
+        <div class="contact-content">
+            <h2>Contact</h2>
+            <div class="contact-links">
+                <a href="mailto:liamcohenhs@gmail.com">liamcohenhs@gmail.com</a>
+                <a href="tel:+12046476414">(204) 647 6414</a>
+                <a href="https://linkedin.com/in/liam-sobering" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/LiamNmbr1" target="_blank" rel="noopener noreferrer">GitHub: LiamNmbr1</a>
+                <a href="https://github.com/Liam11340106" target="_blank" rel="noopener noreferrer">GitHub: Liam11340106</a>
+            </div>
+            <form
+                class="contact-form"
+                id="contact-form"
+                action="https://script.google.com/macros/s/AKfycbwc4WUv7Wpgeb930BTO_WCvkVXjp_Nu9JBgJBo7AO4M3ncXQus-qy0hqpJdWD75EH_vBQ/exec"
+                method="post"
+                target="contact-form-response"
+            >
+                <div class="contact-form-honeypot" aria-hidden="true">
+                    <label for="company">Leave this field empty</label>
+                    <input id="company" name="company" type="text" tabindex="-1" autocomplete="off">
+                </div>
+                <label for="contact-name">Name</label>
+                <input id="contact-name" name="name" type="text" maxlength="120" autocomplete="name" required>
+
+                <label for="contact-email">Email (optional)</label>
+                <input id="contact-email" name="email" type="email" maxlength="254" autocomplete="email">
+
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="message" rows="6" maxlength="5000" required></textarea>
+
+                <button type="submit">Send message</button>
+                <p class="contact-form-status" id="contact-form-status" role="status" aria-live="polite"></p>
+                <p class="contact-form-note">Your message will be stored in a Google Sheet so I can respond.</p>
+            </form>
+            <iframe
+                class="contact-form-response"
+                id="contact-form-response"
+                name="contact-form-response"
+                title="Contact form submission response"
+                hidden
+            ></iframe>
+        </div>
+    </footer>
+</body>
+</html>
