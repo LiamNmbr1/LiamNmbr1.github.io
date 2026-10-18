@@ -40,7 +40,9 @@ document.querySelectorAll(".project-gallery").forEach((gallery) => {
     const imageSlides = imageTrack ? [...imageTrack.children] : [];
     const captionSlides = captionTrack ? [...captionTrack.children] : [];
     const card = gallery.closest(".project-card");
-    const video = imageSlides[0]?.querySelector("video");
+    const videos = imageSlides
+        .map((slide, index) => ({ video: slide.querySelector("video"), index }))
+        .filter((entry) => entry.video);
 
     if (
         !imageTrack ||
@@ -58,23 +60,21 @@ document.querySelectorAll(".project-gallery").forEach((gallery) => {
     let isHovered = false;
 
     const syncVideoPlayback = () => {
-        if (!video) {
-            return;
-        }
+        videos.forEach(({ video, index }) => {
+            if (isHovered && currentIndex === index) {
+                video.play().catch((error) => {
+                    console.error("Unable to play project video:", error);
+                });
+                return;
+            }
 
-        if (isHovered && currentIndex === 0) {
-            video.play().catch((error) => {
-                console.error("Unable to play project video:", error);
-            });
-            return;
-        }
-
-        video.pause();
-        video.currentTime = 0;
+            video.pause();
+            video.currentTime = 0;
+        });
     };
 
-    const openExpandedVideo = () => {
-        if (!video || !videoDialog || !expandedVideo || videoDialog.open) {
+    const openExpandedVideo = (video, slideIndex) => {
+        if (!videoDialog || !expandedVideo || videoDialog.open) {
             return;
         }
 
@@ -83,7 +83,7 @@ document.querySelectorAll(".project-gallery").forEach((gallery) => {
         expandedVideo.muted = true;
         expandedVideo.setAttribute("aria-label", video.getAttribute("aria-label") || "Project video");
         resumePreviewAfterClose = () => {
-            if (card.matches(":hover") && currentIndex === 0) {
+            if (card.matches(":hover") && currentIndex === slideIndex) {
                 isHovered = true;
                 syncVideoPlayback();
             }
@@ -94,18 +94,18 @@ document.querySelectorAll(".project-gallery").forEach((gallery) => {
         });
     };
 
-    if (video) {
+    videos.forEach(({ video, index }) => {
         video.tabIndex = 0;
         video.setAttribute("role", "button");
         video.setAttribute("aria-haspopup", "dialog");
-        video.addEventListener("click", openExpandedVideo);
+        video.addEventListener("click", () => openExpandedVideo(video, index));
         video.addEventListener("keydown", (event) => {
             if (event.key === "Enter" || event.key === " ") {
                 event.preventDefault();
-                openExpandedVideo();
+                openExpandedVideo(video, index);
             }
         });
-    }
+    });
 
     const showSlide = (index) => {
         currentIndex = (index + imageSlides.length) % imageSlides.length;
